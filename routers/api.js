@@ -14,7 +14,7 @@ router.get('/ver', apiController.list);
 router.get('/buscar/id/:id',validarID,apiController.buscarSegunId);
 router.post('/crear',checks, validarChecks,apiController.crear);
 router.put('/editar/id/:id',validarID,checks,validarChecks , apiController.editar);
-router.delete('/eliminar', apiController.eliminar);
+router.delete('/eliminar/id/:id', apiController.eliminar);
 
 
 

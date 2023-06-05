@@ -31,10 +31,11 @@ async editar (req, res) {
   }
 }
 
-  eliminar(req, res) {
+  async eliminar(req, res) {
+    await Farmaciaa.findByIdAndDelete(req.params.id)
     res.status(200).json({
-      msg: "tu producto se elimino con exito",
-    });
+      msg: "la persona fue eliminado"
+    }) 
   }
 }
 
