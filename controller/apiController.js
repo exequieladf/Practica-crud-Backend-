@@ -39,4 +39,15 @@ async editar (req, res) {
   }
 }
 
+/*Se puede hacer asi:
+ async eliminar(req, res) {
+    await Farmaciaa.findByIdAndDelete(req.params.id)
+    res.status(204).send() 
+  }
+
+//OTRA COSA A TENER EN CUENTA: BORRADO LOGICO, SI ES UNA CUENTA BANCARIA SE CAMBIA UN STATUS DE ACTIVO TRUE A FALSE, DESACTIVANDO LA CUENTA PERO GUARDANDO DATOS
+BORRADO ESPEJO ES MAS CONOCIDA EN LOS BANCOS TAMBIEN: CREO EL USUARIO Y LO HACE EN DOS TABLAS SEPARADAS. Uno es para la app otro solamente para respaldo(puede contener
+  cosas privadas con datos sensibles)
+ */
+
 module.exports = new apiController();
